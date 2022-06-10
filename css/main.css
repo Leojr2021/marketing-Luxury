@@ -1,0 +1,388 @@
+body{
+  font-family: 'Playfair Display', serif;
+}
+html {
+  scroll-behavior: smooth;
+  
+}
+a{
+  transition: all 400ms ease;
+}
+
+.btn{
+  transition: all 400ms ease;
+}
+
+#navbar {
+  z-index: 1;
+  background-color: #014f86;
+  /* background-color: transparent; */
+  font-weight: bolder;
+  font-size: large;
+
+  /* height: 80px; */
+}
+.nav-item {
+  margin: 0 1.5rem 0 1.5rem;
+}
+
+/* **************************Banner************************ */
+
+.banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+}
+.central__banner {
+  z-index: 1;
+  grid-column: 2 / 3;
+  grid-row: 1 /2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: -250px; */
+  margin-top: -20rem;
+}
+.central__banner-text {
+  text-align: center;
+  font-weight: bolder;
+
+  color: whitesmoke;
+}
+.central__banner-text h1 {
+  font-size: 6rem;
+}
+.central__banner-text h3 {
+  font-size: 2rem;
+}
+
+.video__container {
+  width: 100%;
+  grid-column: 1 / 4;
+  grid-row: 1 /2;
+  margin: 0;
+}
+
+video {
+  width: 100%;
+  z-index: -1;
+  margin: 0;
+}
+
+/* **********************about us********************** */
+
+.aboutus__container{
+  /* background: url(/assets/houses.jpg); */
+  
+background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),url('/assets/houses.jpg');
+  width: 100%;
+  height: 350px;
+  margin: 0;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+/* background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),url('https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/zvrocy77eh7iokxwwngu/shutterstock_1924408820'); */
+
+
+
+
+
+
+
+/* **********************Information****************** */
+
+
+
+.aboutus__container h1 {
+  text-align: center;
+}
+.aboutus__container p {
+  text-align: center;
+  margin: 2rem 7rem 2rem 7rem;
+}
+
+.information__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.information__text h2 {
+  text-align: center;
+}
+.information__text p {
+  text-align: justify;
+  margin: 1.5rem;
+}
+
+.information__text-left{
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.information__image-left{
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+
+
+.information__right {
+}
+.information__left {
+  
+}
+.information__image img {
+  width: 100%;
+}
+
+.information__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 4rem 2rem 4rem 2rem;
+  gap: 2rem;
+}
+
+/* ******************MAP********************** */
+
+.map__container {
+  display: flex;
+  justify-content: center;
+}
+
+/* ********************CONTACT********************* */
+
+.contact__container {
+  
+  color: whitesmoke;
+  padding: 0;
+  
+}
+.contact__container-out{
+  background-color: #014f86;
+  padding: 3rem 0 3rem 0;
+}
+
+/* .text-center{
+    margin-top: 2rem;
+} */
+
+/* *********************TESTIMONIALS******************* */
+
+
+.carusel__container-background{
+    background-color:antiquewhite ;
+    padding-top: 2rem;
+
+    
+}
+.carusel__container{
+    width: 35%;
+    margin: auto;
+    height: 400px;
+    /* background-color:antiquewhite */
+
+}
+.carusel__container h1{
+    text-align: center;
+    font-weight: bold;
+    /* margin: 3rem 3rem 0 3rem; */
+
+}
+
+
+.item__text{
+    width: 100%;
+    text-align: center;
+    margin-top: 3rem;
+    /* font-style:italic; */
+}
+.item__text p{
+    font-weight: bold;
+    margin-top: 2rem;
+    font-style:italic;
+}
+
+.img__wrapper {
+  overflow: hidden;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+.img__wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #c3c3c3;
+}
+.carousel__img-name{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel__img-name p{
+  margin-left: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+/* *************************footer************** */
+.footer__container{
+    background-color: #012a4a;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: white;
+    
+}
+
+.footer__container-flex{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.footer__container hr{
+  grid-column: 2 / 3;
+  /* margin: auto; */
+}
+
+.social__container{
+  display: flex;
+  flex-direction: column;
+}
+.footer__copyright{
+  grid-column: 1 / 4;
+  margin: auto;
+}
+
+
+
+
+
+/* *********************MEDIA QUERIES - MEDIUM SIZE *********************** */
+
+@media screen and (max-width:1024px) {
+  .central__banner-text h1 {
+    font-size: 3.5rem;
+  }
+  .central__banner-text h3 {
+    font-size: 1rem;
+  }
+  .central__banner {
+    
+    margin-top: -7rem;
+  }
+
+  .information__image  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .carusel__container{
+    width: 70%;
+    margin: auto;
+    height: 450px;
+    /* background-color:antiquewhite */
+
+}
+.footer__container{
+  grid-template-columns: 1fr 1fr;
+}
+.footer__container-left{
+  display: none;
+}
+
+.video__container {
+  height: 100vh;
+  overflow: hidden;
+  /* width: auto; */
+  /* grid-column: 1 / 4;
+  
+  grid-row: 1 /2;
+  margin: 0; */
+}
+
+video {
+  height: 100vh;
+  width: auto;
+  /* z-index: -1;
+  margin: 0; */
+}
+.footer__container hr{
+  grid-column: 1 / 3;
+  /* margin: auto; */
+}
+
+}
+
+
+/* *********************MEDIA QUERIES - SMALL SIZE *********************** */
+
+@media screen and (max-width:600px) {
+  .central__banner-text h1 {
+    font-size: 1.7rem;
+  }
+  .central__banner-text h3 {
+    font-size: 0.6rem;
+  }
+  .central__banner {
+    
+    margin-top: -3rem;
+  }
+
+  .aboutus__container h1{
+    /* font-size: 1rem; */
+    font-size: 1.7rem;
+
+  }
+  .aboutus__container p{
+    /* font-size: 1rem; */
+    font-size: 0.8rem;
+    margin: 1rem;
+
+  }
+
+  .information__right {
+  }
+  .information__left {
+  }
+  /* .information__image img {
+    width: 100%;
+  } */
+  
+  .information__grid {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    /* grid-template-rows: 1fr 1fr; */
+    /* margin: 4rem 2rem 4rem 2rem; */
+    /* gap: 2rem; */
+  }
+
+  .carusel__container{
+    width: 90%;
+    
+  }
+
+  .footer__copyright{
+    text-align: center;
+  }
+
+
+}
