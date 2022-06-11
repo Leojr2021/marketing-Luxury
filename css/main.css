@@ -1,5 +1,6 @@
 body{
-  font-family: 'Playfair Display', serif;
+  /* font-family: 'Playfair Display', serif; */
+  font-family: 'Montserrat', sans-serif;
 }
 html {
   scroll-behavior: smooth;
@@ -8,20 +9,57 @@ html {
 a{
   transition: all 400ms ease;
 }
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+}
+
 
 .btn{
   transition: all 400ms ease;
 }
 
+.navbar-brand{
+  animation: movedown 1s linear 1;
+  animation-delay: 0.5s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+}
+.navbar-nav{
+  animation: movedown 1s linear 1;
+  animation-delay: 1s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+}
+@keyframes movedown {
+  0%{
+    transform: translateY(-100px);
+    visibility: visible;
+  }
+  100%{
+    transform: translateY(0);
+    visibility: visible;
+  }
+  
+}
+
+
 #navbar {
   z-index: 1;
   background-color: #014f86;
-  /* background-color: transparent; */
+ 
   font-weight: bolder;
   font-size: large;
-
-  /* height: 80px; */
+  width: 100vw;
+  z-index: 2;
+  position: fixed;
+  
 }
+
+nav a.active{
+  /* background: var(--color-bg); */
+  color: white;
+}
+
 .nav-item {
   margin: 0 1.5rem 0 1.5rem;
 }
@@ -49,7 +87,27 @@ a{
   font-weight: bolder;
 
   color: whitesmoke;
+  animation: zoomin 1s linear 1;
+  animation-delay: 1s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
 }
+
+@keyframes zoomin {
+  0%{
+    transform: scale(0.5);
+    visibility: visible;
+  }
+  100%{
+    transform: scale(1);
+    visibility: visible;
+  }
+  
+}
+
+
+
+
 .central__banner-text h1 {
   font-size: 6rem;
 }
@@ -136,9 +194,26 @@ background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255,
 .information__left {
   
 }
+
+.information__image{
+  overflow: hidden;
+}
+
 .information__image img {
   width: 100%;
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }
+
+
+.information__image:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+
 
 .information__grid {
   display: grid;
@@ -334,11 +409,18 @@ video {
 /* *********************MEDIA QUERIES - SMALL SIZE *********************** */
 
 @media screen and (max-width:600px) {
+
+  .navbar-nav{
+    animation: none;
+    visibility:visible;
+    
+  }
+
   .central__banner-text h1 {
-    font-size: 1.7rem;
+    font-size: 2rem;
   }
   .central__banner-text h3 {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
   .central__banner {
     
